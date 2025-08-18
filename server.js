@@ -1,12 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import ContactRouter from "./routes/contact.js";
+import {ContactRouter} from "./routes/contact.js";
 import {routerProj} from "./routes/routeProj.js";
 import {routerExp} from "./routes/routeExp.js";
 import path from "path";
 import { fileURLToPath } from 'url';
-
+ 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
