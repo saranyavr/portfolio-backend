@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import {contactRouter} from "./routes/contact.js";
+import { contactRouter} from "./routes/contact.js";
 import {routerProj} from "./routes/routeProj.js";
 import {routerExp} from "./routes/routeExp.js";
 import path from "path";
@@ -36,8 +36,9 @@ app.get("/api/resume-download", (req, res) => {
   });
 });
 
-
-
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to My Portfolio API</h1>");
+});
 
 app.listen(port , () => {
     console.log(`Server is running on port ${port}`);
