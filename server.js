@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import Router from "./routes/contact.js";
+import ContactRouter from "./routes/contact.js";
 import {routerProj} from "./routes/routeProj.js";
 import {routerExp} from "./routes/routeExp.js";
 import path from "path";
@@ -19,14 +19,14 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use("/api/contact", Router);
+app.use("/api/contact", ContactRouter);
 app.use("/api/projects", routerProj);
 app.use("/api/experience", routerExp);
 app.get("/api/resume", (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'SaranyaRajmohan-FullStack-Developer-Resume.pdf'));
 });
 
-app.get("/api/download-resume", (req, res) => {
+app.get("/api/resume/download", (req, res) => {
   const file = path.join(__dirname, 'public', 'SaranyaRajmohan-FullStack-Developer-Resume.pdf');
   res.download(file, 'SaranyaRajmohan-FullStack-Developer-Resume.pdf', (err) => {
     if (err) {
