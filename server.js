@@ -26,7 +26,7 @@ app.get("/api/resume", (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'SaranyaRajmohan-FullStack-Developer-Resume.pdf'));
 });
 
-app.get("/api/resume/download", (req, res) => {
+app.get("/api/resume-download", (req, res) => {
   const file = path.join(__dirname, 'public', 'SaranyaRajmohan-FullStack-Developer-Resume.pdf');
   res.download(file, 'SaranyaRajmohan-FullStack-Developer-Resume.pdf', (err) => {
     if (err) {
