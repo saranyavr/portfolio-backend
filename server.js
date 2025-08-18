@@ -26,15 +26,7 @@ app.get("/api/resume", (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'SaranyaRajmohan-FullStack-Developer-Resume.pdf'));
 });
 
-app.get("/api/resume-download", (req, res) => {
-  const file = path.join(__dirname, 'public', 'SaranyaRajmohan-FullStack-Developer-Resume.pdf');
-  res.download(file, 'SaranyaRajmohan-FullStack-Developer-Resume.pdf', (err) => {
-    if (err) {
-      console.error('Error while downloading resume:', err);
-      res.status(500).send('Could not download file.');
-    }
-  });
-});
+
 
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to My Portfolio API</h1>");
