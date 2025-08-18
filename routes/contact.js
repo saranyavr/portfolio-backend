@@ -21,7 +21,7 @@ router.post('/', async (req, res) => {
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
-  try {
+  try {ss
     await transporter.sendMail(mailOptions);
     res.status(200).json({ success: true, message: 'Email sent!' });
   } catch (error) {
@@ -30,4 +30,4 @@ router.post('/', async (req, res) => {
   }
 });
 
-export const ContactRouter = router;
+export const contactRouter = router;

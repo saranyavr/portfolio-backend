@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
-import {ContactRouter} from "./routes/contact.js";
+import {contactRouter} from "./routes/contact.js";
 import {routerProj} from "./routes/routeProj.js";
 import {routerExp} from "./routes/routeExp.js";
 import path from "path";
@@ -19,7 +19,7 @@ const port = process.env.PORT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use("/api/contact", ContactRouter);
+app.use("/api/contact", contactRouter);
 app.use("/api/projects", routerProj);
 app.use("/api/experience", routerExp);
 app.get("/api/resume", (req, res) => {
