@@ -1,5 +1,5 @@
  const experience = [
-    {
+   /* {
         id: 1,
         jobTitle: "Full Stack Developer",
         company: "Freelance",
@@ -11,7 +11,7 @@
            Implemented user authentication (JWT/Google OAuth) and CRUD operations. Deployed apps using Render.
            Collaborated using Git, managed tasks on Trello.`,
         techList: "JavaScript, React, Node.js, MongoDB, Express.js, RESTful APIs, JWT, Google OAuth, Git, Trello, Render",
-    },
+    }, */
     {
         id: 2,
         jobTitle: "Web Developer",
