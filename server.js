@@ -23,7 +23,7 @@ app.use("/api/contact", contactRouter);
 app.use("/api/projects", routerProj);
 app.use("/api/experience", routerExp);
 app.get("/api/resume", (req, res) => {
-  res.sendFile(path.join(__dirname, 'saranyarajmohan-developer-resume.pdf'));
+  res.sendFile(path.join(__dirname, 'public', 'saranyarajmohan-developer-resume.pdf'));
 });
 
 
